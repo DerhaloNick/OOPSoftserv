@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,15 +21,15 @@ namespace HomeWork1
         Start1:
             Console.WriteLine("Do you want to diside a perimeter of this sqere?(YES or NO)");
             string answer = Console.ReadLine();
-            if (answer != " YES ")
+            if (answer ==  "YES" )
             {
                 double c = a == b ? a * 4 : a * 2 + b * 2;
-                Console.WriteLine();
+                Console.WriteLine(c);
             }
-            else
+            else 
             {
+                Console.WriteLine("I'm terrible sorry.");
                 Console.WriteLine("End the Program? Tab anything");
-                Console.WriteLine();
             };
             //else
             //{
