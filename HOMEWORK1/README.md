@@ -1,60 +1,113 @@
-using System.Threading.Tasks;
+HomeWork1
 
-namespace Hometask1Derhalo
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace HomeWork1
 {
-    class program
+    class Program
+
     {
         static void Main(string[] args)
         {
-            // make 4 args
+            // a,b as long of square
             string name = Console.ReadLine();
-        Link:
-            Console.Write("Enter any a = ");
+            Console.Write("Enter a = ");
             double a = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter digit numbers b = ");
+            Console.Write("Enter b = ");
             double b = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Enter any c = ");
-            double c = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter digit numbers d = ");
-            double d = Convert.ToDouble(Console.ReadLine());
-            if ((b % 2 == 0) && (d % 2 == 0))
+            Console.WriteLine($"Mult {a}*{b}={a * b}");
+
+        Start1:
+            Console.WriteLine("Do you want to decide a perimeter of this sqere?(YES or NO)");
+            string answer = Console.ReadLine();
+            if (answer != " YES ")
             {
-                Console.WriteLine("Sum {0} + {1} + {2} + {3} = {4}", a, b, c, d, a + b + c + d);
-                Console.ReadKey();
+                double c = a == b ? a * 4 : a * 2 + b * 2;
+                Console.WriteLine(c);
             }
+            if (answer != " NO ") ;
             else
             {
-                Console.WriteLine("ENTERED UNCORRECT DIGITS NUMBERS b.d, Try again . ");
-                Console.ReadKey();
-                {
-                    goto Link;
-                }
-            }
-            // make new rouls - if more then 20 - task1 part 2 , alse - Task1 part3
+                Console.WriteLine("End the Program? Tab anything");
+            };
+            //else
+            //{
+            //    Console.WriteLine(("Wrong answer.Start Againe"));
+            //    Console.ReadKey();
+            //    goto Start1;
+            //}
+        }
+}
+
+HomeWork2
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lesson_01_Task_02
+{
+    class Program
+    { static void Main(string[] args)
+        {
+            //string answer;
+            Console.WriteLine("What is your name?");
+            string answer_1 = Console.ReadLine();
+            Console.WriteLine("How old are you?");
+            string answer_2 = Console.ReadLine();
+            Double a = Convert.ToDouble(answer_2);
+            Console.WriteLine($"You name are {answer_1};Your age are {answer_2}");
             {
-            Link1:
-                Console.WriteLine("GOOD.TAB ANY NUMBERS TO CONTINUE.MORE THEN 20 IF YOU'D LIKE TO SUB OR LITTLE IF YOU'D LIKE TO MULT");
-                double f = Convert.ToDouble(Console.ReadLine());
-                //string f = ("{4}");
-                //double y = Convert.ToDoubl(f);
-                if (f > 20)
-                {
-                    Console.WriteLine("Sub " + a + "-" + b + "+" + c + "-" + d + "=" + (a - b + c - d));
-                    Console.ReadKey();
-                    {
-                        goto Link1;
-                    }
-                }
-                else
-                    Console.WriteLine($"Mult {a}*{b} = {a * b}");
+                if (a > 18)
+                Console.WriteLine("What is your second name?");
+                string answer_3 = Console.ReadLine();
+                Console.WriteLine($"You name are {answer_1};Yor second name are {answer_3}; Your age are {a}");
                 Console.ReadKey();
-                Console.WriteLine("GOOD.HOW ARE YOU? (GOOD or NOT GOOD");
-                string answer = Console.ReadLine();
-                if (answer == "GOOD")
-                    Console.WriteLine($"I'M GLAD, THET YOU ARE GOOD.");
-                if (answer == "NOT GOOD")
-                    Console.WriteLine($"I'M TARIBLE SORRY, THET YOU ARE NOT GOOD.");
-                }
+                if (a < 18)
+                    Console.WriteLine("Sorry,we coud not speake with you");
+                    Console.ReadKey();
             }
         }
     }
+}
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Homework3
+{
+    class Program
+    { static void Main(string[] args)
+        {
+            //string answer;
+            Console.WriteLine("What is radius of circle ?");
+            string answer_1 = Console.ReadLine();
+            double r = Convert.ToDouble(answer_1);
+            double b = 3.14;
+            Console.WriteLine("Press Enter to make leight");
+            Console.ReadKey();
+            Console.WriteLine($"Leight {r} * {b}*2={r * b * 2}");
+            Console.ReadKey();
+            Console.WriteLine("Press Enter to make Area");
+            Console.ReadKey();
+            Console.WriteLine($"Area {b} * {r}*{r}={b * r * r}");
+            Console.ReadKey();
+            double c = 4 / 3;
+            Console.WriteLine("Press Enter to make Volume");
+            Console.ReadKey();
+            Console.WriteLine($"Volume {c}*{b}*{r}*{r}={c * b * r * r * r}");
+            Console.ReadKey();
+            Console.WriteLine("Thank You.Have a good day");
+            Console.ReadKey();
+        }
+    }
+}
